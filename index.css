@@ -235,7 +235,7 @@ body, html{
   display: flex;
   align-items: center;
   animation: slideshow 15s linear infinite;
-  -webkit-animation: slideshow 15s linear infinite;
+  -webkit-animation: slideshow 15s 0.1s linear infinite;
 }
 
 .slide img, .slide p{
