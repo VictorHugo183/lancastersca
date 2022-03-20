@@ -1,0 +1,342 @@
+body, html{
+  height: 100%;
+}
+
+/* NAVIGATION BAR */
+
+.logo{
+  width: 250px;
+}
+
+@media (max-width: 400px){
+  .logo{
+    width: 150px;
+  }
+}
+
+/* HERO SECTION */
+
+.hero{
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("./images/finance-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+/*     top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(2deg);
+  transform-origin: top right; */
+  
+}
+
+.hero-text{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #eee;
+}
+
+.separator{
+  position: absolute;
+    bottom: -1px;
+    height: 40px;
+    left: 0;
+}
+
+.separator path {
+    fill: white;
+}
+
+/* INTRODUCION SECTION */
+
+.introduction{
+  margin-bottom: 3rem;
+}
+
+.intro-img{
+  width: 450px;
+}
+
+.introduction h2 {
+    color: #050521;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 0px 0 15px;
+    position: relative;
+    padding-bottom: 5px;
+    display: block;
+    clear: both;
+    text-transform: uppercase;
+}
+
+.introduction h2:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 100%;
+    height: 2px;
+    width: 10%;
+    background: #ca970b;
+}
+
+.introduction p{
+  color: #56595c;
+}
+
+/* SERVICES SECTION */
+
+.services{
+  background: #f7f7f7;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.services h1 span {
+  color: #ca970b;
+  font-weight: 700;
+}
+
+.services h1{
+  position: relative;
+}
+
+.services h1:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ca970b;
+  left: 0;
+  right: 0;
+  margin: 4px auto 0;
+  position: absolute;
+  top: 100%;
+}
+
+/* SERVICES GRID */
+.services .icon-box {
+    padding: 50px 40px 50px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-box:before, .icon-box:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+    border: 1px solid #ebebf2;
+    pointer-events: none;
+    transition: .33s all ease;
+}
+
+.icon-box:before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px;
+}
+
+.icon-box:after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 1px 1px 0;
+}
+
+.icon-box .box-top {
+    top: 0;
+}
+
+.icon-box .box-icon {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.icon-box .box-top, .icon-box .box-body {
+    position: relative;
+    will-change: transform;
+    transition: .33s all ease;
+    -webkit-filter: blur(0);
+}
+
+.icon-box h5 {
+    line-height: 1.11111;
+    font-size: 18px;
+    padding-bottom: 5px;
+    font-family: open sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #050521;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.icon-box h5:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ca970b;
+    left: 0;
+    right: 0;
+    margin: 0px auto 0;
+    position: absolute;
+    top: 100%;
+}
+
+.icon-box.hover:before, .icon-box.hover:after, .icon-box:hover:before, .icon-box:hover:after{
+  width: 100%;
+  height: 100%; 
+  border-color: #ca970b;
+}
+
+/* CLIENTS SECTION */
+
+.clients h1{
+  position: relative;
+}
+
+.clients h1:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ca970b;
+  left: 0;
+  right: 0;
+  margin: 4px auto 0;
+  position: absolute;
+  top: 100%;
+}
+
+.clients h1 span {
+  color: #ca970b;
+  font-weight: 700;
+}
+
+.slider{
+  height: 100px;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
+}
+
+.slide{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 15s linear infinite;
+}
+
+.slide img, .slide p{
+  height: 70px;
+  padding: 0 30px 0 30px;
+}
+
+@keyframes slideshow{
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+
+/* .slider::before, .slider::after{
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider::after{
+  right:0;
+  top: 0;
+  transform: rotateZ(180deg);
+} */
+/* TEAM SECTION */
+.team{
+  background: #f7f7f7;
+  position: relative;
+}
+
+.team h1{
+  position: relative;
+}
+
+.team h1:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #ca970b;
+  left: 0;
+  right: 0;
+  margin: 4px auto 0;
+  position: absolute;
+  top: 100%;
+}
+
+.team h1 span {
+  color: #ca970b;
+  font-weight: 700;
+}
+
+.card {
+  border-bottom: 2px solid #ca970b;
+}
+
+/* FOOTER SECTION */
+
+footer{
+  padding-top: 3rem;
+  background: /* #F5C84A; */ white;
+  color: #050521;
+}
+
+footer ul{
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer li{
+  line-height: 2rem;
+  text-align: start;
+}
+
+footer li a{
+  text-decoration: none;
+  color: #050521;
+  font-weight: 500;
+}
+
+footer li a:hover{
+  color: #ca970b;
+}
+
+footer .footer-links{
+  text-align: center;
+}
+
+footer .branding {
+  border-top: 1px solid black;
+}
+
+@media (max-width: 992px){
+  footer .footer-links{
+    text-align: start;
+  }
+}
